@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Aethera: Martian Bio-Fuel Forge</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <h1>PROJECT SPACE TRASH HACK</h1>
+        <p>THE AUTONOMOUS BIO-FUEL FORGE</p>
+    </header>
+
+    <main class="dashboard">
+
+        <div class="mission-status-card">
+            <h2>MISSION STATUS</h2>
+            <div class="status-grid">
+                <div class="status-item">
+                    <p>SOLAR POWER INPUT</p>
+                    <span id="power-input">100% Stable</span>
+                </div>
+                <div class="status-item">
+                    <p>MARTIAN SOL (Day)</p>
+                    <span id="martian-sol">001</span>
+                </div>
+                <div class="status-item">
+                    <p>TOTAL $\text{CH}_4$ GOAL</p>
+                    <span>10,000 KG</span>
+                </div>
+            </div>
+        </div>
+
+        <section class="module-section">
+            <h2 class="module-title">MODULE A: PHOTO-FORGE (Chemical ISRU)</h2>
+            <div class="module-card module-a">
+                <div class="process-flow">
+                    <div class="flow-item input-item">
+                        <span class="label">INPUTS:</span>
+                        <p>ATMOS. $\text{CO}_2$ / GREYWATER</p>
+                    </div>
+                    <div class="arrow">→</div>
+                    <div class="flow-item reactor-item">
+                        <p>PHOTOELECTROCHEMICAL REACTOR</p>
+                    </div>
+                    <div class="arrow">→</div>
+                    <div class="flow-item output-item">
+                        <span class="label">OUTPUT:</span>
+                        <p id="methane-a-output">0.00 KG $\text{CH}_4$</p>
+                        <p id="water-a-output">0.00 L $\text{H}_2\text{O}$</p>
+                    </div>
+                </div>
+                <progress id="progress-methane-a" value="0" max="10000"></progress>
+                <p class="production-rate">Rate: 15.0 KG/Sol</p>
+            </div>
+        </section>
+
+        <section class="module-section">
+            <h2 class="module-title">MODULE B: MICROBIAL-GOO (Bio-ISRU)</h2>
+            <div class="module-card module-b">
+                <div class="process-flow">
+                    <div class="flow-item input-item">
+                        <span class="label">INPUTS:</span>
+                        <p>SOLID ORGANIC WASTE / $\text{H}_2\text{O}$</p>
+                    </div>
+                    <div class="arrow">→</div>
+                    <div class="flow-item reactor-item">
+                        <p>ANAEROBIC DIGESTER (METHANOGENS)</p>
+                    </div>
+                    <div class="arrow">→</div>
+                    <div class="flow-item output-item">
+                        <span class="label">OUTPUT:</span>
+                        <p id="methane-b-output">0.00 KG $\text{CH}_4$</p>
+                        <p>NUTRIENT RESIDUE</p>
+                    </div>
+                </div>
+                <progress id="progress-methane-b" value="0" max="10000"></progress>
+                <p class="production-rate">Rate: 5.0 KG/Sol</p>
+            </div>
+        </section>
+
+        <section class="module-section">
+            <h2 class="module-title">MODULE C: POLY-PRINTER (Resource Conversion)</h2>
+            <div class="module-card module-c">
+                <div class="process-flow">
+                    <div class="flow-item input-item">
+                        <span class="label">INPUTS:</span>
+                        <p>METHANE ($\text{CH}_4$) / $\text{O}_2$</p>
+                    </div>
+                    <div class="arrow">→</div>
+                    <div class="flow-item reactor-item">
+                        <p>BIOPOLYMER REACTOR (METHANOTROPHS)</p>
+                    </div>
+                    <div class="arrow">→</div>
+                    <div class="flow-item output-item">
+                        <span class="label">OUTPUT:</span>
+                        <p id="pha-output">0.00 KG PHA PLASTIC</p>
+                    </div>
+                </div>
+                <progress id="progress-pha" value="0" max="1000"></progress>
+                <p class="production-rate">Rate: 2.0 KG/Sol</p>
+            </div>
+        </section>
+
+        <div class="total-storage">
+            <h2>TOTAL STORAGE: PROPULSION & MATERIALS</h2>
+            <div class="storage-data">
+                <p>TOTAL $\text{CH}_4$ (Fuel): <span id="total-methane-storage">0.00</span> KG</p>
+                <p>TOTAL PHA (Bioplastic): <span id="total-pha-storage">0.00</span> KG</p>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
